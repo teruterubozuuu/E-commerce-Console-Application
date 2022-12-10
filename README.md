@@ -1,5 +1,5 @@
 # E-commerce-Console-Application
-//This is an activity that I did for my college requirement. 
+//This is an activity that I did for my college requirement. Submitted on Sep 22,2022.
 
 //Below are the instructions given by our professor:
 
