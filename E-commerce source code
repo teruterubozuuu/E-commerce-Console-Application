@@ -1,0 +1,43 @@
+# E-commerce Application
+
+```cpp
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+
+    int milk, iceCream;
+    cout<< "\n\t------------------------- MENU ----------------------------------\n\n";
+    cout<< "\t1.Pasteurized Milk\tPhp15.25 (5% discount for 10 bottles!)\n";
+    cout<< "\t2.Ice Cream\t\tPhp100.00 (7% discount for 3 cans!)\n";
+     cout<< "\n\t----------------------------------------------------------------\n\n";
+    cout << "\n-*-*-* Kindly input the following details. Input 0 if you're not purchasing the product. *-*-*-\n";
+    cout << "\nHow many bottles of milk you would you like to purchase?: ";
+    cin >> milk;
+    cout << "How many cans of ice cream would you like to purchase?: ";
+    cin >> iceCream;
+    cout << "\n-*-*-*-*-*PAYMENT SUMMARY*-*-*-*-*-";
+        if(milk>9)
+            cout<< "\nTotal price for Milk: " <<fixed<<setprecision(2)<<((milk*15.25)-((milk*15.25)*0.05)) << " PHP";
+                else if (milk<10)
+                    cout << "\nTotal price for milk: " <<fixed<<setprecision(2)<< milk*15.25<< " PHP";
+        if (iceCream>2)
+            cout<< "\nTotal price for Ice Cream: " <<fixed<<setprecision(2)<<((iceCream*100.00)-((iceCream*100.00)*0.07))<< " PHP";
+            else if (iceCream <3)
+                cout<< "\nTotal price for Ice Cream: " <<fixed<<setprecision(2)<< iceCream*100.00<< " PHP" <<endl;
+
+    cout <<"\n\nYou have purchased "<< milk<< " bottles of milk and " << iceCream << " can/s of ice cream.";
+        if(milk>9&&iceCream>2)
+            cout<<"\nThe total price is "<<fixed<<setprecision(2)<<((milk*15.25)-((milk*15.25)*0.05))+ ((iceCream*100.00)-((iceCream*100.00)*0.07))<< " PHP";
+                else if(milk>9&&iceCream<3)
+                    cout<<"\nThe total price is "<<fixed<<setprecision(2)<<((milk*15.25)-((milk*15.25)*0.05))+ (iceCream*100.00)<< " PHP";
+                        else if (milk<10&&iceCream>2)
+                            cout<<"\nThe total price is "<<fixed<<setprecision(2)<< (milk*15.25)+ ((iceCream*100.00)-((iceCream*100.00)*0.07))<< " PHP";
+                                else if (milk<10&&iceCream <3)
+                                    cout<<"\nThe total price is "<<fixed<<setprecision(2)<< (milk*15.25) + (iceCream*100.00)<< " PHP";
+     cout << "\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n\n";
+     return 0;
+}
